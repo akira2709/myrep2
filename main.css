@@ -1,0 +1,48 @@
+img{
+    width: 600px;
+    height: auto;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a{
+    text-decoration: none;
+}
+.login a{
+    color: white;
+    font-size: 25px;
+}
+#trash{
+    margin-right: 10px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+figcaption{
+    color: #007bff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+#admin\ link{
+    color: white;
+    font-size: 50px;
+}

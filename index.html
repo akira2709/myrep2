@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>katalog</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="shortcut icon" href="/static/image/icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        {% if current_user.status == 'admin' %}
+            <a href="/for admin" id="admin link">Admin panel</a>
+        {% else %}
+            <h1>3D Model Shop</h1>
+        {% endif %}
+        <div class="login">
+            {% if current_user.is_authenticated %}
+                <a href="/to_trash/{{ current_user.id }}/0/0" id="trash">Корзина</a>
+                <a href="/user_profile">{{ current_user.login }}</a>
+            {% else %}
+                <a href="/login">Login</a>
+            {% endif %}
+        </div>
+    </header>
+    <main>
+        <span>
+            {% for i in item %}
+                <section class="product">
+                    <a href="/{{ i.itemid }}">
+                        <img src="/static/image/{{ i.image }}" alt="no image">
+                        <figcaption>{{ i.iprice }}руб</figcaption>
+                    </a>
+                </section>
+            {% endfor %}
+        </span>
+    </main>
+
+
+</body>
+
+</html>
+
